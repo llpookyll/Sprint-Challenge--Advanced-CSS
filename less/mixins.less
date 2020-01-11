@@ -1,1 +1,28 @@
 // Mixins Here
+.flxwrp100 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.wlk-mxin {
+    margin-top: 60px;
+    border-top: 1px solid @main-border-color;
+    padding: 50px 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.desktop-Button(@size, @color, @background, @border, @radius, @padding) {
+    font-size: @size;
+    color: @color;
+    background: @background;
+    border: @border;
+    border-radius: @radius;
+    padding: @padding;
+}
+
+.mobile-Button(@width, @padding) {
+    width: @width;
+    padding: @padding;
+}

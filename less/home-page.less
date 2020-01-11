@@ -11,19 +11,36 @@
     p {
       padding:0 15px;
     }
+
+    img {
+      width: 100%;
+      border-radius: 6px;
+    }
   
   }
 
   .space-images {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+    .flxwrp100();
 
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+    }
+
+    @media @mobile {
+      img {
+        width: 100%;
+      }
+  
+      .sky {
+        display: none;
+      }
+  
+      .launch {
+        display: none;
+      }
     }
   }
 
@@ -40,11 +57,7 @@
   }
 
   .walk {
-    margin-top: 60px;
-    border-top: 1px solid @main-border-color;
-    padding: 50px 60px;
-    display: flex;
-    justify-content: center;
+    .wlk-mxin();
 
     .walk-text {
       width: 50%;
@@ -59,6 +72,7 @@
 
       .btn {
       }
+      
     }
 
     .walk-img {
@@ -69,6 +83,40 @@
         width: 100%;
         height: auto;
         border-radius: 10px;
+      }
+    }
+
+    button {
+      .desktop-Button(2rem, white, #22283A, none, 6px, 1% 3%);
+    }
+
+    button:hover {
+      .desktop-Button(2rem, #22283A, white, none, 6px, 1% 3%);
+    }
+
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 15px;
+
+      .walk-img {
+        width: 100%;
+        margin: 0;
+        img {
+          width: 100%;
+        }
+      }
+
+      .walk-text {
+        width: 100%;
+
+        h3 {
+          margin-top: 10px;
+        }
+      }
+
+      button {
+        .mobile-Button(100%, 5% 0);
       }
     }
   }
